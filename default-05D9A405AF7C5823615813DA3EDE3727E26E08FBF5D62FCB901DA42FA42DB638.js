@@ -2366,8 +2366,7 @@ class Node2 {
         } else if (kind === fastn_dom.PropertyKind.StringValue) {
             this.#rawInnerValue = staticValue;
             if (!ssr) {
-                let escapedHtmlValue = fastn_utils.escapeHtmlInMarkdown(staticValue);
-                staticValue = fastn_utils.markdown_inline(escapedHtmlValue);
+                staticValue = fastn_utils.markdown_inline(staticValue);
                 staticValue = fastn_utils.process_post_markdown(this.#node, staticValue);
             }
             this.#node.innerHTML = staticValue;
@@ -3030,21 +3029,22 @@ let fastn_utils = {
     },
 
     escapeHtmlInMarkdown(str) {
+        if(typeof str !== 'string') {
+            return str;
+        }
+
         let result = "";
         let ch_map = {
-            '<': "&lt;"
+            '<': "&lt;",
+            '>': "&gt;",
+            '&': "&amp;",
+            '"': "&quot;",
+            "'": "&#39;",
+            '/': "&#47;",
         };
-        // To avoid replacing html characters inside <code> body
-        let backtick_found = false;
         for (var i = 0; i < str.length; i++) {
             let current = str[i];
-            if (current === '`') backtick_found = !backtick_found;
-            if (ch_map[current] !== undefined && !backtick_found) {
-                result += ch_map[current];
-            }
-            else {
-                result += current;
-            }
+            result += ch_map[current] ?? current;
         }
         return result;
     },
@@ -3239,7 +3239,7 @@ class Node {
     toHtmlAsString() {
         const openingTag = `<${this.#tagName}${this.getDataIdString()}${this.getAttributesString()}${this.getClassString()}${this.getStyleString()}>`;
         const closingTag = `</${this.#tagName}>`;
-        const innerHTML = this.innerHTML;
+        const innerHTML = fastn_utils.escapeHtmlInMarkdown(this.innerHTML);
         const childNodes = this.#children.map(child => child.toHtmlAsString()).join('');
 
         return `${openingTag}${innerHTML}${childNodes}${closingTag}`;
@@ -3923,7 +3923,7 @@ window.ftd = ftd;
 
 ftd.toggle = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(!fastn_utils.getter(__args__.a));
@@ -3939,7 +3939,7 @@ ftd.toggle = function (args) {
 }
 ftd.increment = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(fastn_utils.getter(__args__.a) + 1);
@@ -3955,7 +3955,7 @@ ftd.increment = function (args) {
 }
 ftd.increment_by = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(fastn_utils.getter(__args__.a) + fastn_utils.getter(__args__.v));
@@ -3971,7 +3971,7 @@ ftd.increment_by = function (args) {
 }
 ftd.enable_light_mode = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     return (enable_light_mode());
@@ -3981,7 +3981,7 @@ ftd.enable_light_mode = function (args) {
 }
 ftd.enable_dark_mode = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     return (enable_dark_mode());
@@ -3991,7 +3991,7 @@ ftd.enable_dark_mode = function (args) {
 }
 ftd.enable_system_mode = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     return (enable_system_mode());
@@ -4001,7 +4001,7 @@ ftd.enable_system_mode = function (args) {
 }
 ftd.set_bool = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4017,7 +4017,7 @@ ftd.set_bool = function (args) {
 }
 ftd.set_boolean = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4033,7 +4033,7 @@ ftd.set_boolean = function (args) {
 }
 ftd.set_string = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
@@ -4049,7 +4049,7 @@ ftd.set_string = function (args) {
 }
 ftd.set_integer = function (args) {
   let __fastn_super_package_name__ = __fastn_package_name__;
-  __fastn_package_name__ = "__user_name___github_io___repo_name__";
+  __fastn_package_name__ = "fastn_community_github_io_midnight_storm_hero";
   try {
     let __args__ = args;
     let fastn_utils_val___args___a = fastn_utils.clone(__args__.v);
