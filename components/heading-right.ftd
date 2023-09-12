@@ -1,0 +1,175 @@
+-- import: fastn-community.github.io/midnight-storm-hero/components/button
+
+-- component heading-right-helper: 
+caption title:
+ftd.image-src image:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+optional body subtitle:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- heading-right-helper-desktop: $heading-right-helper.title
+image: $heading-right-helper.image
+cta-primary: $heading-right-helper.cta-primary-text
+cta-primary-url: $heading-right-helper.cta-primary-url
+cta-secondary: $heading-right-helper.cta-secondary-text
+cta-secondary-url: $heading-right-helper.cta-secondary-url
+subtitle: $heading-right-helper.subtitle
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- heading-right-helper-mobile: $heading-right-helper.title
+image: $heading-right-helper.image
+cta-primary: $heading-right-helper.cta-primary-text
+cta-primary-url: $heading-right-helper.cta-primary-url
+cta-secondary: $heading-right-helper.cta-secondary-text
+cta-secondary-url: $heading-right-helper.cta-secondary-url
+subtitle: $heading-right-helper.subtitle
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: heading-right-helper
+
+
+
+
+
+
+
+
+
+
+-- component heading-right-helper-desktop: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-url:
+optional string cta-secondary:
+optional string cta-secondary-url:
+optional boolean $mouse-in: false
+optional body subtitle:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 100
+padding-bottom.px: 116
+
+-- ftd.column:
+align-self: center
+spacing.fixed.px: 20
+
+-- ftd.text: $heading-right-helper-desktop.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { heading-right-helper-desktop.subtitle != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$heading-right-helper-desktop.subtitle
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+
+-- button.primary-button: $heading-right-helper-desktop.cta-primary
+link: $heading-right-helper-desktop.cta-primary-url
+
+-- button.secondary-button: $heading-right-helper-desktop.cta-secondary
+link: $heading-right-helper-desktop.cta-secondary-url
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $heading-right-helper-desktop.image
+width.fixed.px: 500
+
+
+-- end: ftd.row
+
+-- end: heading-right-helper-desktop
+
+
+
+
+
+
+
+
+
+
+-- component heading-right-helper-mobile: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-url:
+optional string cta-secondary:
+optional string cta-secondary-url::
+optional body subtitle:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-bottom.px: 80
+
+-- ftd.column:
+spacing.fixed.px: 20
+
+-- ftd.text: $heading-right-helper-mobile.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { heading-right-helper-mobile.subtitle != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$heading-right-helper-mobile.subtitle
+
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+
+-- button.primary-button: $heading-right-helper-mobile.cta-primary
+link: $heading-right-helper-mobile.cta-primary-url
+
+-- button.secondary-button: $heading-right-helper-mobile.cta-secondary
+link: $heading-right-helper-mobile.cta-secondary-url
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $heading-right-helper-mobile.image
+width: fill-container
+
+
+-- end: ftd.column
+
+-- end: heading-right-helper-mobile
+
+
+
+
+
+
+
