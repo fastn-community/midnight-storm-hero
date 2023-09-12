@@ -1,0 +1,69 @@
+-- import: fastn-community.github.io/midnight-storm-hero/components/button
+
+
+
+
+
+
+-- component heading-center-helper:
+caption title:
+optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+ftd.image-src image:
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+align-content: center
+padding-vertical.px: 50
+padding-horizontal.px: 80
+background.solid: $inherited.colors.background.base
+spacing.fixed.px: 20
+role: $inherited.types.copy-regular
+
+-- ftd.text: $heading-center-helper.title
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-large
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 50
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 20
+
+-- ftd.text: $heading-center-helper.subtitle
+if: { heading-center-helper.subtitle != NULL }
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+-- button.primary-button: $heading-center-helper.cta-primary-text
+link: $heading-center-helper.cta-primary-url
+
+-- button.secondary-button: $heading-center-helper.cta-secondary-text
+link: $heading-center-helper.cta-secondary-url
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $heading-center-helper.image
+width: fill-container
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: heading-center-helper
+
+
+
+
+
