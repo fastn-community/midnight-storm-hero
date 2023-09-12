@@ -1,16 +1,10 @@
 -- import: fastn-community.github.io/hero-doc/docs
 -- import: fastn-community.github.io/midnight-storm-hero
-
 -- import: fastn-community.github.io/midnight-storm-hero/components/stack as s
-
 -- import: fastn-community.github.io/midnight-storm-hero/components/heading-left as hl
-
 -- import: fastn-community.github.io/midnight-storm-hero/components/heading-center as hc
-
 -- import: fastn-community.github.io/midnight-storm-hero/components/heading-right as hr
-
 -- import: fastn-community.github.io/midnight-storm-hero/components/left-stack as ls
-
 -- import: fastn-community.github.io/midnight-storm-hero/components/without-image as wi
 
 
