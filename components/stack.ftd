@@ -1,5 +1,5 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
-
+-- import: fastn-stack.github.io/fastn-js/utils
 
 -- component stack-helper:
 caption title:
@@ -9,10 +9,13 @@ optional string cta-primary-text:
 optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
-
+string id: stack-helper
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
+id: $stack-helper.id
+classes: section
 
 -- ftd.desktop:
 
@@ -23,6 +26,7 @@ cta-primary: $stack-helper.cta-primary-text
 cta-primary-url: $stack-helper.cta-primary-url
 cta-secondary: $stack-helper.cta-secondary-text
 cta-secondary-url: $stack-helper.cta-secondary-url
+background: $stack-helper.background
 
 -- end: ftd.desktop
 
@@ -35,12 +39,17 @@ cta-primary: $stack-helper.cta-primary-text
 cta-primary-url: $stack-helper.cta-primary-url
 cta-secondary: $stack-helper.cta-secondary-text
 cta-secondary-url: $stack-helper.cta-secondary-url
+background: $stack-helper.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
 -- end: stack-helper
+
+
+
+
 
 
 
@@ -55,12 +64,17 @@ optional string cta-primary:
 optional string cta-primary-url:
 optional string cta-secondary:
 optional string cta-secondary-url:
-
+optional ftd.background background:
 
 -- ftd.column:
 align-content: center
 width: fill-container
 spacing.fixed.px: 32
+id: hello
+$on-click$: $utils.download-as-image(element_id = hello, filename = card.jpg)
+background.solid if { stack-helper-desktop.background != NULL } : $stack-helper-desktop.background
+padding.px: 50
+
 
 -- ftd.text: $stack-helper-desktop.title
 role: $inherited.types.heading-large
@@ -74,7 +88,6 @@ text-align: center
 width.fixed.percent: 70
 
 $stack-helper-desktop.subtitle
-
 -- ftd.row:
 align-self: center
 spacing.fixed.px: 16
@@ -113,11 +126,14 @@ optional string cta-primary:
 optional string cta-primary-url:
 optional string cta-secondary:
 optional string cta-secondary-url:
+optional ftd.background background:
 
 -- ftd.column:
 align-content: center
 width: fill-container
 spacing.fixed.px: 45
+background.solid if { stack-helper-mobile.background != NULL } : $stack-helper-mobile.background
+padding.px: 24
 
 -- ftd.column:
 spacing.fixed.px: 24
@@ -157,6 +173,11 @@ width: fill-container
 -- end: ftd.column
 
 -- end: stack-helper-mobile
+
+
+
+
+
 
 
 

@@ -1,7 +1,5 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
-
-
 -- component left-stack-helper:
 caption title:
 optional body subtitle:
@@ -10,10 +8,13 @@ optional string cta-primary-text:
 optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
-
+string id: left-stack-helper
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
+id: $left-stack-helper.id
+classes: section
 
 
 -- ftd.desktop:
@@ -25,6 +26,7 @@ cta-primary: $left-stack-helper.cta-primary-text
 cta-primary-url: $left-stack-helper.cta-primary-url
 cta-secondary: $left-stack-helper.cta-secondary-text
 cta-secondary-url: $left-stack-helper.cta-secondary-url
+background: $left-stack-helper.background
 
 -- end: ftd.desktop
 
@@ -37,6 +39,7 @@ cta-primary: $left-stack-helper.cta-primary-text
 cta-primary-url: $left-stack-helper.cta-primary-url
 cta-secondary: $left-stack-helper.cta-secondary-text
 cta-secondary-url: $left-stack-helper.cta-secondary-url
+background: $left-stack-helper.background
 
 -- end: ftd.mobile
 
@@ -61,13 +64,15 @@ optional string cta-primary:
 optional string cta-primary-url:
 optional string cta-secondary:
 optional string cta-secondary-url:
-optional boolean $mouse-in: false
-optional boolean $mouse-enter: false
+optional ftd.background background:
 
 -- ftd.column:
 align-content: left
 width: fill-container
 spacing.fixed.px: 45
+background.solid if { left-stack-helper-desktop.background != NULL } : $left-stack-helper-desktop.background
+padding-vertical.px: 50
+padding-horizontal.px: 50
 
 -- ftd.column:
 spacing.fixed.px: 24
@@ -126,11 +131,16 @@ optional string cta-primary:
 optional string cta-primary-url:
 optional string cta-secondary:
 optional string cta-secondary-url:
+optional ftd.background background:
 
 -- ftd.column:
 align-content: left
 width: fill-container
 spacing.fixed.px: 45
+background.solid if { left-stack-helper-mobile.background != NULL } : $left-stack-helper-mobile.background
+padding-vertical.px: 50
+padding-horizontal.px: 50
+
 
 -- ftd.column:
 spacing.fixed.px: 24
@@ -148,8 +158,6 @@ color: $inherited.colors.text
 $left-stack-helper-mobile.subtitle
 
 -- end: ftd.column
-
-
 
 -- ftd.row:
 width: fill-container
@@ -171,9 +179,5 @@ width: fill-container
 -- end: ftd.column
 
 -- end: left-stack-helper-mobile
-
-
-
-
 
 

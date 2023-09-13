@@ -1,7 +1,6 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
 
-
 -- component heading-left-helper: 
 caption title:
 ftd.image-src image:
@@ -10,11 +9,10 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 optional body subtitle:
-
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
-
 
 -- ftd.desktop:
 
@@ -25,7 +23,7 @@ cta-primary-url: $heading-left-helper.cta-primary-url
 cta-secondary: $heading-left-helper.cta-secondary-text
 cta-secondary-url: $heading-left-helper.cta-secondary-url
 subtitle: $heading-left-helper.subtitle
-
+background: $heading-left-helper.background
 
 -- end: ftd.desktop
 
@@ -38,13 +36,20 @@ cta-primary-url: $heading-left-helper.cta-primary-url
 cta-secondary: $heading-left-helper.cta-secondary-text
 cta-secondary-url: $heading-left-helper.cta-secondary-url
 subtitle: $heading-left-helper.subtitle
-
+background: $heading-left-helper.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
 -- end: heading-left-helper
+
+
+
+
+
+
+
 
 
 
@@ -57,18 +62,25 @@ optional string cta-secondary:
 optional string cta-secondary-url:
 optional boolean $mouse-in: false
 optional body subtitle:
+optional ftd.background background:
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 100
-padding-bottom.px: 116
+spacing: space-between
+background.solid if { heading-left-helper-desktop.background != NULL } : $heading-left-helper-desktop.background
+padding-vertical.px: 50
+border-radius.px: 20
+padding-horizontal.px: 50
+align-content: center
+margin-bottom.px: 50
 
 -- ftd.image:
 src: $heading-left-helper-desktop.image
-width.fixed.px: 500
+width.fixed.percent: 40
 
 -- ftd.column:
 align-self: center
+width.fixed.percent: 55
 spacing.fixed.px: 20
 
 -- ftd.text: $heading-left-helper-desktop.title
@@ -118,11 +130,17 @@ optional string cta-secondary-url:
 optional boolean $mouse-in: false
 optional body subtitle:
 optional string link:
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 24
 padding-bottom.px: 80
+background.solid if { heading-left-helper-mobile.background != NULL } : $heading-left-helper-mobile.background
+padding-vertical.px: 24
+border-radius.px: 20
+padding-horizontal.px: 24
+
 
 -- ftd.column:
 spacing.fixed.px: 20
@@ -161,6 +179,9 @@ link: $heading-left-helper-mobile.link
 -- end: ftd.column
 
 -- end: heading-left-helper-mobile
+
+
+
 
 
 

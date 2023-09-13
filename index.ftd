@@ -9,18 +9,17 @@
 
 
 
+
+
+;; ---------------- DOCUMENTATION FOR YOUR HEADER COMPONENTS ----------------------
+;; This renders the default documentation
+
 -- docs.home:
 package-name: midnight-storm-hero
 package-full-name: fastn-community.github.io/midnight-storm-hero
 github: https://github.com/fastn-community/midnight-storm-hero
 category: fastn-community.github.io/midnight-storm-hero
-preview-url: preview/
-license-url: NULL
-;; license-url: https://github.com/fastn-community/midnight-storm-hero/blob/main/LICENSE
-
-
-
-
+license-url: https://github.com/fastn-community/midnight-storm-hero/blob/main/LICENSE
 
 
 
@@ -34,6 +33,7 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 ftd.image-src image:
+optional ftd.background background:
 
 -- s.stack-helper: $stack.title
 cta-primary-text: $stack.cta-primary-text
@@ -42,6 +42,7 @@ cta-secondary-text: $stack.cta-secondary-text
 cta-secondary-url: $stack.cta-secondary-url
 image: $stack.image
 subtitle: $stack.subtitle
+background: $stack.background
 
 -- end: stack
 
@@ -58,6 +59,7 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 ftd.image-src image:
+optional ftd.background background:
 
 -- ls.left-stack-helper: $left-stack.title
 cta-primary-text: $left-stack.cta-primary-text
@@ -66,6 +68,7 @@ cta-secondary-text: $left-stack.cta-secondary-text
 cta-secondary-url: $left-stack.cta-secondary-url
 image: $left-stack.image
 subtitle: $left-stack.subtitle
+background: $left-stack.background
 
 -- end: left-stack
 
@@ -84,6 +87,7 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 ftd.image-src image:
+optional ftd.background background:
 
 -- hc.heading-center-helper: $heading-center.title
 cta-primary-text: $heading-center.cta-primary-text
@@ -92,6 +96,7 @@ cta-secondary-text: $heading-center.cta-secondary-text
 cta-secondary-url: $heading-center.cta-secondary-url
 image: $heading-center.image
 subtitle: $heading-center.subtitle
+background: $heading-center.background
 
 -- end: heading-center
 
@@ -112,6 +117,7 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 ftd.image-src image:
+optional ftd.background background:
 
 -- hl.heading-left-helper: $heading-left.title
 cta-primary-text: $heading-left.cta-primary-text
@@ -120,6 +126,7 @@ cta-secondary-text: $heading-left.cta-secondary-text
 cta-secondary-url: $heading-left.cta-secondary-url
 image: $heading-left.image
 subtitle: $heading-left.subtitle
+background: $heading-left.background
 
 -- end: heading-left
 
@@ -136,6 +143,7 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 ftd.image-src image:
+optional ftd.background background:
 
 -- hr.heading-right-helper: $heading-right.title
 cta-primary-text: $heading-right.cta-primary-text
@@ -144,6 +152,7 @@ cta-secondary-text: $heading-right.cta-secondary-text
 cta-secondary-url: $heading-right.cta-secondary-url
 image: $heading-right.image
 subtitle: $heading-right.subtitle
+background: $heading-right.background
 
 -- end: heading-right
 
