@@ -8,6 +8,7 @@ optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
 optional body subtitle:
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
@@ -21,6 +22,7 @@ cta-primary-url: $heading-right-helper.cta-primary-url
 cta-secondary: $heading-right-helper.cta-secondary-text
 cta-secondary-url: $heading-right-helper.cta-secondary-url
 subtitle: $heading-right-helper.subtitle
+background: $heading-right-helper.background
 
 -- end: ftd.desktop
 
@@ -33,6 +35,7 @@ cta-primary-url: $heading-right-helper.cta-primary-url
 cta-secondary: $heading-right-helper.cta-secondary-text
 cta-secondary-url: $heading-right-helper.cta-secondary-url
 subtitle: $heading-right-helper.subtitle
+background: $heading-right-helper.background
 
 -- end: ftd.mobile
 
@@ -58,15 +61,22 @@ optional string cta-secondary:
 optional string cta-secondary-url:
 optional boolean $mouse-in: false
 optional body subtitle:
+optional ftd.background background:
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 100
-padding-bottom.px: 116
+spacing: space-between
+background.solid if { heading-right-helper-desktop.background != NULL } : $heading-right-helper-desktop.background
+padding-vertical.px: 50
+border-radius.px: 20
+padding-horizontal.px: 50
+align-content: center
+margin-bottom.px: 50
 
 -- ftd.column:
 align-self: center
 spacing.fixed.px: 20
+width.fixed.percent: 55
 
 -- ftd.text: $heading-right-helper-desktop.title
 role: $inherited.types.heading-medium
@@ -97,7 +107,7 @@ link: $heading-right-helper-desktop.cta-secondary-url
 
 -- ftd.image:
 src: $heading-right-helper-desktop.image
-width.fixed.px: 500
+width.fixed.percent: 40
 
 
 -- end: ftd.row
@@ -121,11 +131,16 @@ optional string cta-primary-url:
 optional string cta-secondary:
 optional string cta-secondary-url::
 optional body subtitle:
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 24
 padding-bottom.px: 80
+background.solid if { heading-right-helper-mobile.background != NULL } : $heading-right-helper-mobile.background
+padding-vertical.px: 24
+border-radius.px: 20
+padding-horizontal.px: 24
 
 -- ftd.column:
 spacing.fixed.px: 20
@@ -140,7 +155,6 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 $heading-right-helper-mobile.subtitle
-
 
 -- ftd.row:
 width: fill-container
@@ -166,10 +180,4 @@ width: fill-container
 -- end: ftd.column
 
 -- end: heading-right-helper-mobile
-
-
-
-
-
-
 

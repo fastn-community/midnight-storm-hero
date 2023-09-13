@@ -2,7 +2,7 @@
 
 -- fastn.package: fastn-community.github.io/midnight-storm-hero
 favicon: /-/fastn-community.github.io/midnight-storm-hero/favicon.ico
-
+-- fastn.dependency: fastn-stack.github.io/fastn-js
 -- fastn.dependency: fastn-community.github.io/hero-doc
 -- fastn.dependency: fastn-community.github.io/category-doc-components as cdc
 

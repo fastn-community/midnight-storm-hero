@@ -1,63 +1,46 @@
+=-- import: fastn-community.github.io/midnight-storm-hero/components/button
+
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
 
-
-
-
-
--- component heading-center-helper:
+-- component heading-center-helper: 
 caption title:
-optional body subtitle:
+ftd.image-src image:
 optional string cta-primary-text:
 optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
-ftd.image-src image:
+optional body subtitle:
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
-color: $inherited.colors.text
-align-content: center
-padding-vertical.px: 50
-padding-horizontal.px: 80
-background.solid: $inherited.colors.background.base
-spacing.fixed.px: 20
-role: $inherited.types.copy-regular
 
--- ftd.text: $heading-center-helper.title
-color: $inherited.colors.text-strong
-role: $inherited.types.heading-large
+-- ftd.desktop:
 
--- ftd.row:
-width: fill-container
-spacing.fixed.px: 50
+-- heading-center-helper-desktop: $heading-center-helper.title
+image: $heading-center-helper.image
+cta-primary-text: $heading-center-helper.cta-primary-text
+cta-primary-url: $heading-center-helper.cta-primary-url
+cta-secondary-text: $heading-center-helper.cta-secondary-text
+cta-secondary-url: $heading-center-helper.cta-secondary-url
+subtitle: $heading-center-helper.subtitle
+background: $heading-center-helper.background
 
--- ftd.column:
-width: fill-container
-spacing.fixed.px: 20
+-- end: ftd.desktop
 
--- ftd.text: $heading-center-helper.subtitle
-if: { heading-center-helper.subtitle != NULL }
+-- ftd.mobile:
 
--- ftd.row:
-width: fill-container
-spacing.fixed.px: 16
+-- heading-center-helper-mobile: $heading-center-helper.title
+image: $heading-center-helper.image
+cta-primary-text: $heading-center-helper.cta-primary-text
+cta-primary-url: $heading-center-helper.cta-primary-url
+cta-secondary-text: $heading-center-helper.cta-secondary-text
+cta-secondary-url: $heading-center-helper.cta-secondary-url
+subtitle: $heading-center-helper.subtitle
+background: $heading-center-helper.background
 
--- button.primary-button: $heading-center-helper.cta-primary-text
-link: $heading-center-helper.cta-primary-url
-
--- button.secondary-button: $heading-center-helper.cta-secondary-text
-link: $heading-center-helper.cta-secondary-url
-
--- end: ftd.row
-
--- end: ftd.column
-
--- ftd.image:
-src: $heading-center-helper.image
-width: fill-container
-
--- end: ftd.row
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -67,3 +50,124 @@ width: fill-container
 
 
 
+
+
+
+-- component heading-center-helper-desktop:
+caption title:
+optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+ftd.image-src image:
+optional ftd.background background:
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+align-content: center
+padding-vertical.px: 50
+padding-horizontal.px: 80
+background.solid if { heading-center-helper-desktop.background != NULL } : $heading-center-helper-desktop.background
+spacing.fixed.px: 20
+role: $inherited.types.copy-regular
+border-radius.px: 20
+
+-- ftd.text: $heading-center-helper-desktop.title
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-large
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.column:
+width.fixed.percent: 55
+spacing.fixed.px: 20
+
+-- ftd.text: $heading-center-helper-desktop.subtitle
+if: { heading-center-helper-desktop.subtitle != NULL }
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+-- button.primary-button: $heading-center-helper-desktop.cta-primary-text
+link: $heading-center-helper-desktop.cta-primary-url
+
+-- button.secondary-button: $heading-center-helper-desktop.cta-secondary-text
+link: $heading-center-helper-desktop.cta-secondary-url
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $heading-center-helper-desktop.image
+width.fixed.percent: 40
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: heading-center-helper-desktop
+
+
+
+
+
+
+
+
+
+-- component heading-center-helper-mobile:
+caption title:
+optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+ftd.image-src image:
+optional ftd.background background:
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+align-content: center
+padding-vertical.px: 50
+padding-horizontal.px: 80
+background.solid if { heading-center-helper-mobile.background != NULL } : $heading-center-helper-mobile.background
+spacing.fixed.px: 20
+role: $inherited.types.copy-regular
+border-radius.px: 20
+
+-- ftd.text: $heading-center-helper-mobile.title
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-large
+
+
+-- ftd.text: $heading-center-helper-mobile.subtitle
+if: { heading-center-helper-mobile.subtitle != NULL }
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+-- button.primary-button: $heading-center-helper-mobile.cta-primary-text
+link: $heading-center-helper-mobile.cta-primary-url
+
+-- button.secondary-button: $heading-center-helper-mobile.cta-secondary-text
+link: $heading-center-helper-mobile.cta-secondary-url
+
+-- end: ftd.row
+
+
+-- ftd.image:
+src: $heading-center-helper-mobile.image
+width.fixed.percent: 40
+
+
+-- end: ftd.column
+
+-- end: heading-center-helper-mobile
