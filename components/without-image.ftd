@@ -94,7 +94,6 @@ z-index: 0
 -- ftd.column:
 spacing.fixed.px: 16
 width: fill-container
-z-index: 1
 
 -- ftd.text: $without-image-helper-mobile.title
 role: $inherited.types.heading-large

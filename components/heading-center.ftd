@@ -69,7 +69,7 @@ color: $inherited.colors.text
 align-content: center
 padding-vertical.px: 50
 padding-horizontal.px: 80
-background.solid if { heading-center-helper-desktop.background != NULL } : $heading-center-helper-desktop.background
+background: $heading-center-helper-desktop.background
 spacing.fixed.px: 20
 role: $inherited.types.copy-regular
 border-radius.px: 20
@@ -137,7 +137,7 @@ color: $inherited.colors.text
 align-content: center
 padding-vertical.px: 50
 padding-horizontal.px: 80
-background.solid if { heading-center-helper-mobile.background != NULL } : $heading-center-helper-mobile.background
+background: $heading-center-helper-mobile.background
 spacing.fixed.px: 20
 role: $inherited.types.copy-regular
 border-radius.px: 20

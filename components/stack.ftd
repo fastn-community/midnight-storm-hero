@@ -9,13 +9,11 @@ optional string cta-primary-text:
 optional string cta-primary-url:
 optional string cta-secondary-text:
 optional string cta-secondary-url:
-string id: stack-helper
 optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
-id: $stack-helper.id
-classes: section
+
 
 -- ftd.desktop:
 
@@ -70,7 +68,7 @@ optional ftd.background background:
 align-content: center
 width: fill-container
 spacing.fixed.px: 32
-background.solid if { stack-helper-desktop.background != NULL } : $stack-helper-desktop.background
+background: $stack-helper-desktop.background
 padding.px: 50
 
 
@@ -130,7 +128,7 @@ optional ftd.background background:
 align-content: center
 width: fill-container
 spacing.fixed.px: 45
-background.solid if { stack-helper-mobile.background != NULL } : $stack-helper-mobile.background
+background.solid: $stack-helper-mobile.background
 padding.px: 24
 
 -- ftd.column:

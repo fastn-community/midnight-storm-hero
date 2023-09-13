@@ -67,7 +67,7 @@ optional ftd.background background:
 -- ftd.row:
 width: fill-container
 spacing: space-between
-background.solid if { heading-left-helper-desktop.background != NULL } : $heading-left-helper-desktop.background
+background: $heading-left-helper-desktop.background
 padding-vertical.px: 50
 border-radius.px: 20
 padding-horizontal.px: 50
@@ -136,7 +136,7 @@ optional ftd.background background:
 width: fill-container
 spacing.fixed.px: 24
 padding-bottom.px: 80
-background.solid if { heading-left-helper-mobile.background != NULL } : $heading-left-helper-mobile.background
+background.solid: $heading-left-helper-mobile.background
 padding-vertical.px: 24
 border-radius.px: 20
 padding-horizontal.px: 24
