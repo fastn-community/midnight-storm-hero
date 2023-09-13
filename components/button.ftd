@@ -84,7 +84,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $button.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $button.hover, v = false)
 
 -- ftd.text: $button.text
-
+white-space: nowrap
 
 -- end: ftd.row
 

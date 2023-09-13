@@ -70,8 +70,6 @@ optional ftd.background background:
 align-content: center
 width: fill-container
 spacing.fixed.px: 32
-id: hello
-$on-click$: $utils.download-as-image(element_id = hello, filename = card.jpg)
 background.solid if { stack-helper-desktop.background != NULL } : $stack-helper-desktop.background
 padding.px: 50
 
