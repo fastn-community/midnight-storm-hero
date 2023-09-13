@@ -70,14 +70,13 @@ optional ftd.background background:
 align-content: left
 width: fill-container
 spacing.fixed.px: 45
-background.solid if { left-stack-helper-desktop.background != NULL } : $left-stack-helper-desktop.background
+background.solid: $left-stack-helper-desktop.background
 padding-vertical.px: 50
 padding-horizontal.px: 50
 
 -- ftd.column:
 spacing.fixed.px: 24
 width.fixed.percent: 70
-z-index: 5
 
 -- ftd.text: $left-stack-helper-desktop.title
 role: $inherited.types.heading-large
@@ -108,7 +107,6 @@ link: $left-stack-helper-desktop.cta-secondary-url
 -- ftd.image:
 src: $left-stack-helper-desktop.image
 width: fill-container
-z-index: 5
 
 -- end: ftd.column
 
@@ -137,7 +135,7 @@ optional ftd.background background:
 align-content: left
 width: fill-container
 spacing.fixed.px: 45
-background.solid if { left-stack-helper-mobile.background != NULL } : $left-stack-helper-mobile.background
+background.solid: $left-stack-helper-mobile.background
 padding-vertical.px: 50
 padding-horizontal.px: 50
 
