@@ -165,8 +165,18 @@ background: $heading-right.background
 -- component without-image:
 caption title:
 optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+optional ftd.background background:
 
 -- wi.without-image-helper: $without-image.title
 subtitle: $without-image.subtitle
+cta-primary-text: $without-image.cta-primary-text
+cta-primary-url: $without-image.cta-primary-url
+cta-secondary-text: $without-image.cta-secondary-text
+cta-secondary-url: $without-image.cta-secondary-url
+background: $without-image.background
 
 -- end: without-image
