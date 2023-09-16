@@ -1,8 +1,13 @@
-
+-- import: fastn-community.github.io/midnight-storm-hero/components/button
 
 -- component without-image-helper:
 caption title:
 optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
@@ -11,6 +16,11 @@ width: fill-container
 
 -- without-image-helper-desktop: $without-image-helper.title
 subtitle: $without-image-helper.subtitle
+cta-primary-text: $without-image-helper.cta-primary-text
+cta-primary-url: $without-image-helper.cta-primary-url
+cta-secondary-text: $without-image-helper.cta-secondary-text
+cta-secondary-url: $without-image-helper.cta-secondary-url
+background: $without-image-helper.background
 
 -- end: ftd.desktop
 
@@ -18,6 +28,11 @@ subtitle: $without-image-helper.subtitle
 
 -- without-image-helper-mobile: $without-image-helper.title
 subtitle: $without-image-helper.subtitle
+cta-primary-text: $without-image-helper.cta-primary-text
+cta-primary-url: $without-image-helper.cta-primary-url
+cta-secondary-text: $without-image-helper.cta-secondary-text
+cta-secondary-url: $without-image-helper.cta-secondary-url
+background: $without-image-helper.background
 
 -- end: ftd.mobile
 
@@ -32,15 +47,27 @@ subtitle: $without-image-helper.subtitle
 
 
 
--- ftd.background-image bg-image: 
-src: $assets.files.images.background.svg 
-repeat: no-repeat 
+
+
+
+
+
+
 
 
 
 -- component without-image-helper-desktop:
 caption title:
-optional body subtitle: 
+optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+optional ftd.background background:
+
+-- ftd.column:
+width: fill-container
+background: $without-image-helper-desktop.background
 
 -- ftd.column:
 width: fill-container
@@ -61,8 +88,21 @@ color: $inherited.colors.text
 
 $without-image-helper-desktop.subtitle
 
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+-- button.primary-button: $without-image-helper-desktop.cta-primary-text
+link: $without-image-helper-desktop.cta-primary-url
+
+-- button.secondary-button: $without-image-helper-desktop.cta-secondary-text
+link: $without-image-helper-desktop.cta-secondary-url
+
+-- end: ftd.row
+
 -- end: ftd.column
 
+-- end: ftd.column
 
 -- end: without-image-helper-desktop
 
@@ -78,9 +118,15 @@ $without-image-helper-desktop.subtitle
 -- component without-image-helper-mobile:
 caption title:
 optional body subtitle:
+optional string cta-primary-text:
+optional string cta-primary-url:
+optional string cta-secondary-text:
+optional string cta-secondary-url:
+optional ftd.background background:
 
 -- ftd.column:
 padding-vertical.px: 80
+background: $without-image-helper-mobile.background
 
 -- ftd.row:
 background.image: $bg-image
@@ -106,9 +152,35 @@ color: $inherited.colors.text
 
 $without-image-helper-mobile.subtitle
 
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+
+-- button.primary-button: $without-image-helper-mobile.cta-primary-text
+link: $without-image-helper-mobile.cta-primary-url
+
+-- button.secondary-button: $without-image-helper-mobile.cta-secondary-text
+link: $without-image-helper-mobile.cta-secondary-url
+
+-- end: ftd.row
+
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: without-image-helper-mobile
 
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.background-image bg-image:
+src: $assets.files.images.background.svg
+repeat: no-repeat
