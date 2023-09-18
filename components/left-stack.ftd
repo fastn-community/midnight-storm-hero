@@ -1,6 +1,6 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
--- component left-stack-helper:
+-- component hero-left-stack:
 caption title:
 optional body subtitle:
 ftd.image-src image:
@@ -13,39 +13,39 @@ optional ftd.background background:
 
 -- ftd.column:
 width: fill-container
-id: $left-stack-helper.id
+id: $hero-left-stack.id
 classes: section
 
 
 -- ftd.desktop:
 
--- left-stack-helper-desktop: $left-stack-helper.title
-subtitle: $left-stack-helper.subtitle
-image: $left-stack-helper.image
-cta-primary: $left-stack-helper.cta-primary-text
-cta-primary-url: $left-stack-helper.cta-primary-url
-cta-secondary: $left-stack-helper.cta-secondary-text
-cta-secondary-url: $left-stack-helper.cta-secondary-url
-background: $left-stack-helper.background
+-- left-stack-helper-desktop: $hero-left-stack.title
+subtitle: $hero-left-stack.subtitle
+image: $hero-left-stack.image
+cta-primary: $hero-left-stack.cta-primary-text
+cta-primary-url: $hero-left-stack.cta-primary-url
+cta-secondary: $hero-left-stack.cta-secondary-text
+cta-secondary-url: $hero-left-stack.cta-secondary-url
+background: $hero-left-stack.background
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- left-stack-helper-mobile: $left-stack-helper.title
-subtitle: $left-stack-helper.subtitle
-image: $left-stack-helper.image
-cta-primary: $left-stack-helper.cta-primary-text
-cta-primary-url: $left-stack-helper.cta-primary-url
-cta-secondary: $left-stack-helper.cta-secondary-text
-cta-secondary-url: $left-stack-helper.cta-secondary-url
-background: $left-stack-helper.background
+-- left-stack-helper-mobile: $hero-left-stack.title
+subtitle: $hero-left-stack.subtitle
+image: $hero-left-stack.image
+cta-primary: $hero-left-stack.cta-primary-text
+cta-primary-url: $hero-left-stack.cta-primary-url
+cta-secondary: $hero-left-stack.cta-secondary-text
+cta-secondary-url: $hero-left-stack.cta-secondary-url
+background: $hero-left-stack.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: left-stack-helper
+-- end: hero-left-stack
 
 
 
@@ -177,5 +177,3 @@ width: fill-container
 -- end: ftd.column
 
 -- end: left-stack-helper-mobile
-
-
