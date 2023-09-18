@@ -1,6 +1,6 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
--- component without-image-helper:
+-- component hero-without-image:
 caption title:
 optional body subtitle:
 optional string cta-primary-text:
@@ -14,31 +14,31 @@ width: fill-container
 
 -- ftd.desktop:
 
--- without-image-helper-desktop: $without-image-helper.title
-subtitle: $without-image-helper.subtitle
-cta-primary-text: $without-image-helper.cta-primary-text
-cta-primary-url: $without-image-helper.cta-primary-url
-cta-secondary-text: $without-image-helper.cta-secondary-text
-cta-secondary-url: $without-image-helper.cta-secondary-url
-background: $without-image-helper.background
+-- without-image-helper-desktop: $hero-without-image.title
+subtitle: $hero-without-image.subtitle
+cta-primary-text: $hero-without-image.cta-primary-text
+cta-primary-url: $hero-without-image.cta-primary-url
+cta-secondary-text: $hero-without-image.cta-secondary-text
+cta-secondary-url: $hero-without-image.cta-secondary-url
+background: $hero-without-image.background
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- without-image-helper-mobile: $without-image-helper.title
-subtitle: $without-image-helper.subtitle
-cta-primary-text: $without-image-helper.cta-primary-text
-cta-primary-url: $without-image-helper.cta-primary-url
-cta-secondary-text: $without-image-helper.cta-secondary-text
-cta-secondary-url: $without-image-helper.cta-secondary-url
-background: $without-image-helper.background
+-- without-image-helper-mobile: $hero-without-image.title
+subtitle: $hero-without-image.subtitle
+cta-primary-text: $hero-without-image.cta-primary-text
+cta-primary-url: $hero-without-image.cta-primary-url
+cta-secondary-text: $hero-without-image.cta-secondary-text
+cta-secondary-url: $hero-without-image.cta-secondary-url
+background: $hero-without-image.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: without-image-helper
+-- end: hero-without-image
 
 
 

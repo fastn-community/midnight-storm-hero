@@ -1,7 +1,7 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 -- import: fastn-stack.github.io/fastn-js/utils
 
--- component stack-helper:
+-- component hero-stack:
 caption title:
 optional body subtitle:
 ftd.image-src image:
@@ -17,33 +17,33 @@ width: fill-container
 
 -- ftd.desktop:
 
--- stack-helper-desktop: $stack-helper.title
-subtitle: $stack-helper.subtitle
-image: $stack-helper.image
-cta-primary: $stack-helper.cta-primary-text
-cta-primary-url: $stack-helper.cta-primary-url
-cta-secondary: $stack-helper.cta-secondary-text
-cta-secondary-url: $stack-helper.cta-secondary-url
-background: $stack-helper.background
+-- stack-helper-desktop: $hero-stack.title
+subtitle: $hero-stack.subtitle
+image: $hero-stack.image
+cta-primary: $hero-stack.cta-primary-text
+cta-primary-url: $hero-stack.cta-primary-url
+cta-secondary: $hero-stack.cta-secondary-text
+cta-secondary-url: $hero-stack.cta-secondary-url
+background: $hero-stack.background
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- stack-helper-mobile: $stack-helper.title
-subtitle: $stack-helper.subtitle
-image: $stack-helper.image
-cta-primary: $stack-helper.cta-primary-text
-cta-primary-url: $stack-helper.cta-primary-url
-cta-secondary: $stack-helper.cta-secondary-text
-cta-secondary-url: $stack-helper.cta-secondary-url
-background: $stack-helper.background
+-- stack-helper-mobile: $hero-stack.title
+subtitle: $hero-stack.subtitle
+image: $hero-stack.image
+cta-primary: $hero-stack.cta-primary-text
+cta-primary-url: $hero-stack.cta-primary-url
+cta-secondary: $hero-stack.cta-secondary-text
+cta-secondary-url: $hero-stack.cta-secondary-url
+background: $hero-stack.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: stack-helper
+-- end: hero-stack
 
 
 
@@ -169,12 +169,3 @@ width: fill-container
 -- end: ftd.column
 
 -- end: stack-helper-mobile
-
-
-
-
-
-
-
-
-

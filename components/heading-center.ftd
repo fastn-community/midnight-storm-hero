@@ -1,7 +1,7 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
 
--- component heading-center-helper: 
+-- component hero-heading-center:
 caption title:
 ftd.image-src image:
 optional string cta-primary-text:
@@ -16,33 +16,33 @@ width: fill-container
 
 -- ftd.desktop:
 
--- heading-center-helper-desktop: $heading-center-helper.title
-image: $heading-center-helper.image
-cta-primary-text: $heading-center-helper.cta-primary-text
-cta-primary-url: $heading-center-helper.cta-primary-url
-cta-secondary-text: $heading-center-helper.cta-secondary-text
-cta-secondary-url: $heading-center-helper.cta-secondary-url
-subtitle: $heading-center-helper.subtitle
-background: $heading-center-helper.background
+-- heading-center-helper-desktop: $hero-heading-center.title
+image: $hero-heading-center.image
+cta-primary-text: $hero-heading-center.cta-primary-text
+cta-primary-url: $hero-heading-center.cta-primary-url
+cta-secondary-text: $hero-heading-center.cta-secondary-text
+cta-secondary-url: $hero-heading-center.cta-secondary-url
+subtitle: $hero-heading-center.subtitle
+background: $hero-heading-center.background
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- heading-center-helper-mobile: $heading-center-helper.title
-image: $heading-center-helper.image
-cta-primary-text: $heading-center-helper.cta-primary-text
-cta-primary-url: $heading-center-helper.cta-primary-url
-cta-secondary-text: $heading-center-helper.cta-secondary-text
-cta-secondary-url: $heading-center-helper.cta-secondary-url
-subtitle: $heading-center-helper.subtitle
-background: $heading-center-helper.background
+-- heading-center-helper-mobile: $hero-heading-center.title
+image: $hero-heading-center.image
+cta-primary-text: $hero-heading-center.cta-primary-text
+cta-primary-url: $hero-heading-center.cta-primary-url
+cta-secondary-text: $hero-heading-center.cta-secondary-text
+cta-secondary-url: $hero-heading-center.cta-secondary-url
+subtitle: $hero-heading-center.subtitle
+background: $hero-heading-center.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: heading-center-helper
+-- end: hero-heading-center
 
 
 

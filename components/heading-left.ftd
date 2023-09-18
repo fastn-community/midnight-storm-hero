@@ -1,7 +1,7 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
 
--- component heading-left-helper: 
+-- component hero-heading-left:
 caption title:
 ftd.image-src image:
 optional string cta-primary-text:
@@ -16,33 +16,33 @@ width: fill-container
 
 -- ftd.desktop:
 
--- heading-left-helper-desktop: $heading-left-helper.title
-image: $heading-left-helper.image
-cta-primary: $heading-left-helper.cta-primary-text
-cta-primary-url: $heading-left-helper.cta-primary-url
-cta-secondary: $heading-left-helper.cta-secondary-text
-cta-secondary-url: $heading-left-helper.cta-secondary-url
-subtitle: $heading-left-helper.subtitle
-background: $heading-left-helper.background
+-- heading-left-helper-desktop: $hero-heading-left.title
+image: $hero-heading-left.image
+cta-primary: $hero-heading-left.cta-primary-text
+cta-primary-url: $hero-heading-left.cta-primary-url
+cta-secondary: $hero-heading-left.cta-secondary-text
+cta-secondary-url: $hero-heading-left.cta-secondary-url
+subtitle: $hero-heading-left.subtitle
+background: $hero-heading-left.background
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- heading-left-helper-mobile: $heading-left-helper.title
-image: $heading-left-helper.image
-cta-primary: $heading-left-helper.cta-primary-text
-cta-primary-url: $heading-left-helper.cta-primary-url
-cta-secondary: $heading-left-helper.cta-secondary-text
-cta-secondary-url: $heading-left-helper.cta-secondary-url
-subtitle: $heading-left-helper.subtitle
-background: $heading-left-helper.background
+-- heading-left-helper-mobile: $hero-heading-left.title
+image: $hero-heading-left.image
+cta-primary: $hero-heading-left.cta-primary-text
+cta-primary-url: $hero-heading-left.cta-primary-url
+cta-secondary: $hero-heading-left.cta-secondary-text
+cta-secondary-url: $hero-heading-left.cta-secondary-url
+subtitle: $hero-heading-left.subtitle
+background: $hero-heading-left.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: heading-left-helper
+-- end: hero-heading-left
 
 
 
@@ -179,12 +179,3 @@ link: $heading-left-helper-mobile.link
 -- end: ftd.column
 
 -- end: heading-left-helper-mobile
-
-
-
-
-
-
-
-
-

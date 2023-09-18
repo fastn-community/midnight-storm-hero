@@ -1,6 +1,6 @@
 -- import: fastn-community.github.io/midnight-storm-hero/components/button
 
--- component heading-right-helper: 
+-- component hero-heading-right:
 caption title:
 ftd.image-src image:
 optional string cta-primary-text:
@@ -15,33 +15,33 @@ width: fill-container
 
 -- ftd.desktop:
 
--- heading-right-helper-desktop: $heading-right-helper.title
-image: $heading-right-helper.image
-cta-primary: $heading-right-helper.cta-primary-text
-cta-primary-url: $heading-right-helper.cta-primary-url
-cta-secondary: $heading-right-helper.cta-secondary-text
-cta-secondary-url: $heading-right-helper.cta-secondary-url
-subtitle: $heading-right-helper.subtitle
-background: $heading-right-helper.background
+-- heading-right-helper-desktop: $hero-heading-right.title
+image: $hero-heading-right.image
+cta-primary: $hero-heading-right.cta-primary-text
+cta-primary-url: $hero-heading-right.cta-primary-url
+cta-secondary: $hero-heading-right.cta-secondary-text
+cta-secondary-url: $hero-heading-right.cta-secondary-url
+subtitle: $hero-heading-right.subtitle
+background: $hero-heading-right.background
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- heading-right-helper-mobile: $heading-right-helper.title
-image: $heading-right-helper.image
-cta-primary: $heading-right-helper.cta-primary-text
-cta-primary-url: $heading-right-helper.cta-primary-url
-cta-secondary: $heading-right-helper.cta-secondary-text
-cta-secondary-url: $heading-right-helper.cta-secondary-url
-subtitle: $heading-right-helper.subtitle
-background: $heading-right-helper.background
+-- heading-right-helper-mobile: $hero-heading-right.title
+image: $hero-heading-right.image
+cta-primary: $hero-heading-right.cta-primary-text
+cta-primary-url: $hero-heading-right.cta-primary-url
+cta-secondary: $hero-heading-right.cta-secondary-text
+cta-secondary-url: $hero-heading-right.cta-secondary-url
+subtitle: $hero-heading-right.subtitle
+background: $hero-heading-right.background
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: heading-right-helper
+-- end: hero-heading-right
 
 
 
@@ -180,4 +180,3 @@ width: fill-container
 -- end: ftd.column
 
 -- end: heading-right-helper-mobile
-
